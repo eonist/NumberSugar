@@ -32,7 +32,7 @@ class NumberParser {
      * Retuns the lowest number in a list of numbers
      * - Note: Swift.min can be used, but this function supports arrays Swift.Min doesn't
      */
-    static func min<T: Comparable>(_ numbers:[T]) -> T {
+    static func min<T: Comparable>(_ numbers: [T]) -> T {
         //var min = numbers.count > 0 ? numbers[0] : 0 as! T
         //for number in numbers{ if(number < min) {min = number}}
         return numbers.min() ?? 0 as! T
@@ -41,7 +41,7 @@ class NumberParser {
      * Returns the floor and ceil of many numbers
      */
     static func findRangeFromNumbers<T: Comparable>(_ numbers: T...) -> (min: T, max: T)? {
-        if numbers.count > 0 {
+        if !numbers.isEmpty {
             var min = numbers[0]
             var max = numbers[0]
             numbers.forEach { number in
@@ -56,5 +56,5 @@ class NumberParser {
     /**
      * Clips a value between min and max (optional name: clamp)
      */
-    static func clip<T: Comparable>(_ val: T, _ min: T, _ max: T) -> T {return minMax(val, min, max)}
+    static func clip<T: Comparable>(_ val: T, _ min: T, _ max: T) -> T { return minMax(val, min, max) }
 }

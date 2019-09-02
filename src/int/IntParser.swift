@@ -1,13 +1,13 @@
 import Foundation
 
-class IntParser{
+class IntParser {
     /**
      * Return a  Random number within a min max value
      * ## Examples: IntParser.random(0,3)//Can return either of: 0,1,2,3
      @ - Important: You now have the native `let randomInt = Int.random(in: 1..<5)`
      */
-    static func random(_ min: Int, _ max: Int) -> Int{//returns an integer between 0 - x
-        return Int(arc4random_uniform(UInt32(max)) + UInt32(min))
+    static func random(_ min: Int, _ max: Int) -> Int {//returns an integer between 0 - x
+        return Int.random(in: min..<max)//--Int(arc4random_uniform(UInt32(max)) + UInt32(min))
     }
     /**
      * Returns a normalized integer value (loopy index)
@@ -24,7 +24,7 @@ class IntParser{
      */
     static func normalize(_ index: Int, _ len: Int) -> Int {
         if index >= 0 {
-            if index < len{
+            if index < len {
                 return index
             }else {
                 return index % len
@@ -40,15 +40,15 @@ class IntParser{
     /**
      * - Fixme: ⚠️️ ⚠️️ Return enum
      */
-    static func kind(_ theInt: Int) -> String{
-        switch theInt {
-            case 0:
-                return "Zero"
-            case let x where x > 0://<--where is a constraint, must be true
-                return "Positive"
-            default:
-                return "Negative"
-        }
+    static func kind(_ theInt: Int) -> String {
+      switch theInt {
+      case 0:
+         return "Zero"
+      case let x where x > 0://<--where is a constraint, must be true
+         return "Positive"
+      default:
+         return "Negative"
+      }
     }
     /**
      * ## Examples: minMax([8, -6, 2, 109, 3, 71])//(-6,109)
@@ -82,8 +82,8 @@ class IntParser{
     /**
      * See comment in the forward call (aka use normalize)
      */
-    static func loop(_ index: Int, _ start: Int, _ end: Int) -> Int{// :- Fixme: ⚠️️ start,end,index is easier to understand
-        return CGFloatParser.loop(index.cgFloat,start.cgFloat,end.cgFloat).int
+    static func loop(_ index: Int, _ start: Int, _ end: Int) -> Int {// :- Fixme: ⚠️️ start,end,index is easier to understand
+        return CGFloatParser.loop(index.cgFloat, start.cgFloat, end.cgFloat).int
     }
     /**
      * Returns the number of digits in a number
@@ -97,5 +97,4 @@ class IntParser{
    static func digitCount(_ n: Int) -> Int {
        return Int(log2(Double(n)) / log2(10.0)) + 1
    }
-
 }

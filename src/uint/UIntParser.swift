@@ -26,10 +26,10 @@ class UIntParser {
     * ## Examples: Swift.print(UIntParser.digit(9, 2))
     */
    static func digit(_ n: UInt, _ numOfDigits: Int) -> String {
-      let stringNum: String = String(n)
+      let stringNum: String = .init(n)
       let leftOver: Int = numOfDigits - stringNum.count
-      let strArr: [String] = Array.init(repeating: "0", count: leftOver)
-      let str: String = strArr.joined(separator: "")
+      let strArr: [String] = .init(repeating: "0", count: leftOver)
+      let str: String = strArr.joined()
       return str + String(n)
    }
 }

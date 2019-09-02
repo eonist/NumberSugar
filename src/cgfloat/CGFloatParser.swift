@@ -1,6 +1,6 @@
 import Foundation
 
-public class CGFloatParser{
+public class CGFloatParser {
     /**
      * Returns the number with a set number of PARAM: decimalCount
      * - Note: unlike the tofixed method that returns this: Number(6.0001).toFixed(2)// 6.01, the aprox method returns a more clinical number
@@ -12,7 +12,7 @@ public class CGFloatParser{
      * ## Examples: approx(40.124,2)//40.12
      * CAUTION: the old approx method was a little different. try stackoverflow if this design doesn't work in every case
      */
-    static func approx(_ number: CGFloat, _ decimalCount: Int) -> CGFloat{
+    static func approx(_ number: CGFloat, _ decimalCount: Int) -> CGFloat {
         let format = NSString(format: "%%.%if", decimalCount)
         let string = NSString(format: format, number)
         return CGFloat(atof(string.utf8String))
@@ -20,7 +20,7 @@ public class CGFloatParser{
     /**
      * Return odd numbers
      */
-    static func odds(_ numbers: [CGFloat]) -> [CGFloat]{
+    static func odds(_ numbers: [CGFloat]) -> [CGFloat] {
         let odds = numbers.filter { ($0 %% 2.0) == 1 }//greate example of the filter method
         return odds
     }
@@ -28,7 +28,7 @@ public class CGFloatParser{
      * sums numbers with addition
      * - Fixme: ⚠️️ add an option for multiplication minus and dividens
      */
-    static func sum(_ numbers:[CGFloat]) -> CGFloat {
+    static func sum(_ numbers: [CGFloat]) -> CGFloat {
         return numbers.reduce(0) { $0 + $1 }
     }
     /**
@@ -42,11 +42,11 @@ public class CGFloatParser{
      * print(difference(-3,-7))//-4
      * print(difference(-3,7))//10
      */
-    static func difference(_ a: CGFloat, _ b: CGFloat) -> CGFloat{
+    static func difference(_ a: CGFloat, _ b: CGFloat) -> CGFloat {
         let distance: CGFloat = CGFloatParser.distance(a, b)
         if a > b { return -distance }
         else if a < b { return distance }
-        else {return 0}
+        else { return 0 }
     }
     /**
     * Linearly interpolation (lerp)
@@ -78,7 +78,7 @@ public class CGFloatParser{
         if NumberAsserter.negative(start, 0) || NumberAsserter.negative(end, 0) && end < start {
             a = Swift.min(start, end)
             b = Swift.max(start, end)
-        }else{
+        } else {
             a = Swift.max(start, end)
             b = Swift.min(start, end)
         }
@@ -96,16 +96,16 @@ public class CGFloatParser{
      * print(distance(5,-2));//7
      * - Fixme: ⚠️️ ⚠️️ Do a bulk test to see which is faster, then maybe deprecate this method
      */
-    static func distance(_ a: CGFloat,_ b: CGFloat)->CGFloat {
-        if a.isNegative && b.isNegative {return abs(Swift.min(a,b)) - abs(Swift.max(a,b))}
-        else if a.isPositive && b.isPositive {return Swift.max(a, b) - Swift.min(a,b)}
-        else {return abs(a) + abs(b)}/*if a is positive then b is negative and opposite*/
+    static func distance(_ a: CGFloat, _ b: CGFloat) -> CGFloat {
+        if a.isNegative && b.isNegative { return abs(Swift.min(a, b)) - abs(Swift.max(a, b)) }
+        else if a.isPositive && b.isPositive { return Swift.max(a, b) - Swift.min(a, b) }
+        else { return abs(a) + abs(b) }/*if a is positive then b is negative and opposite*/
     }
     /**
      * Returns the difference between a and b (the returning number can be negative or posetive or zero)
      */
-    static func relativeDifference(_ a: CGFloat,_ b: CGFloat) -> CGFloat{
-        return b-a
+    static func relativeDifference(_ a: CGFloat, _ b: CGFloat) -> CGFloat {
+        return b - a
     }
     /**
      * Returns a constant looping number, really great when making looping slideshows
@@ -124,16 +124,16 @@ public class CGFloatParser{
     static func loop(_ index: CGFloat, _ start: CGFloat, _ end: CGFloat) -> CGFloat {// :- Fixme: ⚠️️ start,end,index is easier to understand
         var r: CGFloat
         var direction: CGFloat
-        if start < end  { direction = +1 }/*Analyse the relationship between start and end*/
+        if start < end { direction = +1 }/*Analyse the relationship between start and end*/
         else if start > end { direction = -1 }
         else { fatalError("condition not supported") }
         if index.isPositive { r = start - (index * direction) }//Analyse the index direction
         else { r = start + (index * direction) }
         let resultEndDist: CGFloat = CGFloatParser.distance(r, end)
-        let startEndDist: CGFloat = CGFloatParser.distance(start,end)
+        let startEndDist: CGFloat = CGFloatParser.distance(start, end)
         let remainder: CGFloat = resultEndDist %% startEndDist//Modulo returns the remainder
         var increment: CGFloat
-        if remainder == 0 {increment = 0}
+        if remainder == 0 { increment = 0 }
         else if index > 0 && resultEndDist > startEndDist { increment = remainder }//Fix the check after && is ugly
         else { increment = (startEndDist - remainder) }
         r = start + (direction * increment)
@@ -143,8 +143,8 @@ public class CGFloatParser{
      * Returns an a array of interpolated numbers between min and max
      * ## Examples: CGFloatParser.interpolatedRange(0, 1, 3)//[0.0, 0.5, 1.0]
      */
-     static func interpolatedRange(_ min: CGFloat ,_ max: CGFloat,_ length: Int)->[CGFloat]{
-        var interpolatedRange:[CGFloat] = []
+     static func interpolatedRange(_ min: CGFloat, _ max: CGFloat, _ length: Int) -> [CGFloat] {
+        var interpolatedRange: [CGFloat] = []
         if length == 0 { return interpolatedRange }//only populate the array with values if the length is more than zero
         let increaseBy: CGFloat = max / CGFloat(length - 1)
         //Swift.print(value)
@@ -164,8 +164,8 @@ public class CGFloatParser{
      * ## Examples: average([1, 2, 3, 4, 5])// returns 3.0, which is the arithmetic mean of these five numbers
      * ## Examples: average([3, 8.25, 18.75])// returns 10.0, which is the arithmetic mean of these three numbers
      */
-    static func average(_ nums:[CGFloat]) -> CGFloat {
-        return nums.count == 0 ? 0 : nums.reduce(0, +) / nums.count.cgFloat
+    static func average(_ nums: [CGFloat]) -> CGFloat {
+        return nums.isEmpty ? 0 : nums.reduce(0, +) / nums.count.cgFloat
         /*var total: CGFloat = 0
          for number in numbers {total += number}
          return total / CGFloat(numbers.count)*/

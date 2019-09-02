@@ -3,7 +3,7 @@ import Foundation
  * Definition of Asserter: state a fact or belief confidently and forcefully
  * - Fixme: ⚠️️ Rename this to CGFloatAsserter, and then make a typeAlias to NumberAsserter -> to not break legacy code. (Do the same with PointAserter etc)
  */
-class CGFloatAsserter{
+class CGFloatAsserter {
     static let epsilon: CGFloat = 10e-12
     /**
      * RETURN: true if number is odd
@@ -20,7 +20,7 @@ class CGFloatAsserter{
     /**
      * ## Examples: event(0), even(2), even(4)
      */
-    static func even(_ number: CGFloat) -> Bool{
+    static func even(_ number: CGFloat) -> Bool {
         return !odd(number)
     }
     /**

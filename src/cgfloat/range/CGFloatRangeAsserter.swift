@@ -14,7 +14,7 @@ class CGFloatRangeAsserter {
      * - Note: another name for this could be absolutlyWithin
      * - Fixme: ⚠️️ replace this class/function with a generic solution
      */
-    static func contained(_ range: (start: CGFloat,end: CGFloat), _ number: CGFloat) -> Bool {
+    static func contained(_ range: (start: CGFloat, end: CGFloat), _ number: CGFloat) -> Bool {
         return number < CGFloatRangeParser.max(range) && number >= CGFloatRangeParser.min(range)
     }
 }

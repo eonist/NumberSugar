@@ -5,9 +5,9 @@ class CGFloatModifier {
      * Returns a number that is incremented by PARAM: incrementation
      * - Note: The multiplication and division is a floating bug fix, optimized by looking at how many decimal points the PARAM: number has
      */
-    static func increment(_ number: CGFloat,_ incrementation: CGFloat) -> CGFloat {
+    static func increment(_ number: CGFloat, _ incrementation: CGFloat) -> CGFloat {
         let decimalCount: Int = NumberParser.decimals(number)
-        let modifier: CGFloat =  pow(10, CGFloat(decimalCount))
+        let modifier: CGFloat = pow(10, CGFloat(decimalCount))
         return ((number * modifier) + (incrementation * modifier)) / modifier
     }
     /**
@@ -16,7 +16,7 @@ class CGFloatModifier {
      */
     static func decrement(_ number: CGFloat, _ decrementation: CGFloat) -> CGFloat {
         let numOfDecimals: Int = NumberParser.decimals(number)
-        let modifier: CGFloat =  pow(10, CGFloat(numOfDecimals))
+        let modifier: CGFloat = pow(10, CGFloat(numOfDecimals))
         return ((number * modifier) - (decrementation * modifier)) / modifier
     }
     /**
@@ -44,8 +44,8 @@ class CGFloatModifier {
      */
     static func roundTo(_ number: CGFloat, _ closest: CGFloat) -> CGFloat {
         let remainder: CGFloat = number %% closest
-        if remainder == 0 {return number}
-        else if abs(remainder) < (closest / 2) { return number - remainder}
+        if remainder == 0 { return number }
+        else if abs(remainder) < (closest / 2) { return number - remainder }
         else if NumberAsserter.negative(number, 0) { return number - (closest + remainder) }
         else { return number + (closest - remainder) }
     }

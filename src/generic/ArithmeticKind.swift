@@ -5,11 +5,11 @@ import Foundation
  * - Note: These methods only seem to work when a method with generic properties is involved
  */
 protocol ArithmeticKind {
-    static func +(lhs: Self, rhs: Self) -> Self
-    static func -(lhs: Self, rhs: Self) -> Self
-    static func /(lhs: Self, rhs: Self) -> Self
-    static func *(lhs: Self, rhs: Self) -> Self
-    func isNear(_ value: Self, _ epsilon: CGFloat)->Bool
+    static func + (lhs: Self, rhs: Self) -> Self
+    static func - (lhs: Self, rhs: Self) -> Self
+    static func / (lhs: Self, rhs: Self) -> Self
+    static func * (lhs: Self, rhs: Self) -> Self
+    func isNear(_ value: Self, _ epsilon: CGFloat) -> Bool
 }
 
 extension CGFloat: ArithmeticKind {}

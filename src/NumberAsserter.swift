@@ -1,9 +1,9 @@
 import Foundation
-class NumberAsserter{
+class NumberAsserter {
     /**
      * - Note: In most cases you will want to write if(someNumber < 0)
      */
-    static func negative<T: Comparable>(_ number: T, _ zero: T) -> Bool{
+    static func negative<T: Comparable>(_ number: T, _ zero: T) -> Bool {
         return number < zero
     }
     /**

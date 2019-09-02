@@ -1,6 +1,6 @@
 import Foundation
 
-var NaN: CGFloat = CGFloat.nan/*Global variable for the sake of convenience*/
+var NaN: CGFloat = .nan/*Global variable for the sake of convenience*/
 
 extension CGFloat {
     func toFixed(_ places: Int) -> CGFloat { return CGFloatModifier.toFixed(self, places) }
@@ -11,11 +11,11 @@ extension CGFloat {
     var string: String { return String(describing: self) }
     var str: String { return String(describing: self) }/*shorthand*/
     var isNegative: Bool { return NumberAsserter.negative(self, 0) }
-   var isPositive: Bool { return NumberAsserter.positive(self, 0) }
+    var isPositive: Bool { return NumberAsserter.positive(self, 0) }
     var positive: CGFloat { return abs(self) }//new
     var negative: CGFloat { return -abs(self) }//new
-    func clip(_ min: CGFloat,_ max: CGFloat) -> CGFloat { return NumberParser.clip(self, min, max)}/*Convenince*/
-    func interpolate(_ to: CGFloat, _ scalar: CGFloat) -> CGFloat{return CGFloatParser.interpolate(self, to, scalar)}
+    func clip(_ min: CGFloat, _ max: CGFloat) -> CGFloat { return NumberParser.clip(self, min, max) }/*Convenince*/
+    func interpolate(_ to: CGFloat, _ scalar: CGFloat) -> CGFloat { return CGFloatParser.interpolate(self, to, scalar) }
     func roundTo(_ closest: CGFloat) -> CGFloat { return CGFloatModifier.roundTo(self, closest) }/*Convenince*/
     /**
      * CGFloat(10).min(5)//5
@@ -44,7 +44,7 @@ extension Sequence where Iterator.Element == CGFloat {
  * Bool(CGFloat(20))//true
  * Bool(CGFloat.nan)//true
  */
-extension Bool{
+extension Bool {
     init(_ value: CGFloat) {
         self.init(value != 0)
     }
@@ -55,34 +55,36 @@ extension Bool{
  * - Fixme: ⚠️️ add support for returning Double aswell
  * - Fixme: ⚠️️ add support for Int and Float aswell
  */
-public func + (left: CGFloat, right: Double) -> CGFloat {
-    return left + CGFloat(right)
-}
-/**
- * Support for addition of CGFLoat and Double
- */
-public func + (left: Double, right: CGFloat) -> CGFloat {
-    return CGFloat(left) + right
-}
-public func * (left: Int, right: CGFloat) -> CGFloat {
-    return CGFloat(left) * right
-}
-public func * (left: CGFloat, right: Int) -> CGFloat {
-    return left * CGFloat(right)
+extension CGFloat {
+   public static func + (left: CGFloat, right: Double) -> CGFloat {
+      return left + CGFloat(right)
+   }
+   /**
+    * Support for addition of CGFLoat and Double
+    */
+   public static func + (left: Double, right: CGFloat) -> CGFloat {
+      return CGFloat(left) + right
+   }
+   public static func * (left: Int, right: CGFloat) -> CGFloat {
+      return CGFloat(left) * right
+   }
+   public static func * (left: CGFloat, right: Int) -> CGFloat {
+      return left * CGFloat(right)
+   }
+   /**
+    * Brings back simple modulo syntax (was removed in swift 3)
+    * Calculates the remainder of expression1 divided by expression2
+    * The sign of the modulo result matches the sign of the dividend (the first number). For example, -4 % 3 and -4 % -3 both evaluate to -1
+    * ## Examples:
+    * print(12 %% 5)    // 2
+    * print(4.3 %% 2.1) // 0.0999999999999996
+    * print(4 %% 4)     // 0
+    * - Note: The first print returns 2, rather than 12/5 or 2.4, because the modulo (%) operator returns only the remainder. The second trace returns 0.0999999999999996 instead of the expected 0.1 because of the limitations of floating-point accuracy in binary computing.
+    * - Note: Int's and UInt can still use single %
+    * - Note: there is also .remainder which supports returning negatives as oppose to truncatingRemainder (aka the old %) which returns only positive. .remiander also behaves diferently with negative values. Sometimes more usefully so
+    */
+   public static func %% (left: CGFloat, right: CGFloat) -> CGFloat {
+      return left.truncatingRemainder(dividingBy: right)
+   }
 }
 infix operator %%/*<--infix operator is required for custom infix char combos*/
-/**
- * Brings back simple modulo syntax (was removed in swift 3)
- * Calculates the remainder of expression1 divided by expression2
- * The sign of the modulo result matches the sign of the dividend (the first number). For example, -4 % 3 and -4 % -3 both evaluate to -1
- * ## Examples:
- * print(12 %% 5)    // 2
- * print(4.3 %% 2.1) // 0.0999999999999996
- * print(4 %% 4)     // 0
- * - Note: The first print returns 2, rather than 12/5 or 2.4, because the modulo (%) operator returns only the remainder. The second trace returns 0.0999999999999996 instead of the expected 0.1 because of the limitations of floating-point accuracy in binary computing.
- * - Note: Int's and UInt can still use single %
- * - Note: there is also .remainder which supports returning negatives as oppose to truncatingRemainder (aka the old %) which returns only positive. .remiander also behaves diferently with negative values. Sometimes more usefully so
- */
-public func %% (left: CGFloat, right: CGFloat) -> CGFloat {
-    return left.truncatingRemainder(dividingBy: right)
-}
