@@ -1,10 +1,10 @@
 import Foundation
 
-class IntAsserter {
+public class IntAsserter {
    /**
     * Asserts if an int is odd or even
     */
-   static func odd(_ int: Int) -> Bool {
+   public static func odd(_ int: Int) -> Bool {
       if int % 2 == 0 {
        return false
       } else {
@@ -14,5 +14,5 @@ class IntAsserter {
 	/**
     * random true or flase
     */
-   var eitherOr: Bool { return Bool.random() }//{return arc4random_uniform(2) == 0}
+   public var eitherOr: Bool { return Bool.random() }//{return arc4random_uniform(2) == 0}
 }

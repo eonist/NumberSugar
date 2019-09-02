@@ -1,7 +1,7 @@
-import Cocoa
+import Foundation
 
 extension Double {
-    var cgFloat: CGFloat { return CGFloat(self) }/*Convenince*/
-    var uint: UInt { return UInt(self) }/*Convenince*/
+    public var cgFloat: CGFloat { return CGFloat(self) }/*Convenince*/
+    public var uint: UInt { return UInt(self) }/*Convenince*/
 //    var color:NSColor { return self.uint.color }
 }

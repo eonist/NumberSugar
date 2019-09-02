@@ -1,6 +1,6 @@
 import Foundation
 
-class UIntParser {
+public class UIntParser {
    /**
     * Returns a normalized unsigned integer value
     * - Note: great for iterating uint arrays
@@ -17,7 +17,7 @@ class UIntParser {
     * print(UintParser.normalize(7, 4));//3
     * print(UintParser.normalize(8, 4));//0
     */
-   static func normalize(_ index: UInt, _ len: UInt) -> UInt {
+   public static func normalize(_ index: UInt, _ len: UInt) -> UInt {
       return index < len ? index : index % len
    }
    /**
@@ -25,7 +25,7 @@ class UIntParser {
     * - Fixme: ⚠️️ refactor this code when you have time
     * ## Examples: Swift.print(UIntParser.digit(9, 2))
     */
-   static func digit(_ n: UInt, _ numOfDigits: Int) -> String {
+   public static func digit(_ n: UInt, _ numOfDigits: Int) -> String {
       let stringNum: String = .init(n)
       let leftOver: Int = numOfDigits - stringNum.count
       let strArr: [String] = .init(repeating: "0", count: leftOver)

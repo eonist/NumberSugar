@@ -1,11 +1,3 @@
-//
-//  NumberSugarMacOS.h
-//  NumberSugarMacOS
-//
-//  Created by Eon on 01/09/2019.
-//  Copyright © 2019 FutureLab. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 //! Project version number for NumberSugarMacOS.

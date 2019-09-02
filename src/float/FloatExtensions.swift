@@ -1,7 +1,7 @@
 import Foundation
 
 extension Float {
-    var int: Int { return Int(self) }
-    var cgFloat: CGFloat { return CGFloat(self) }/*Convenince*/
-    var double: Double { return Double(self) }/*Convenince*/
+   public var int: Int { return Int(self) }
+   public var cgFloat: CGFloat { return CGFloat(self) }/*Convenince*/
+   public var double: Double { return Double(self) }/*Convenince*/
 }

@@ -7,26 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1B4036F231D8B8500163CAD /* NumberSugariOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B4036D231D8B8500163CAD /* NumberSugariOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1B40373231D8B9600163CAD /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58008231C36E1000E15A4 /* NumberParser.swift */; };
+		F1B40374231D8B9600163CAD /* UIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800A231C36E1000E15A4 /* UIntExtension.swift */; };
+		F1B40375231D8B9600163CAD /* UIntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800B231C36E1000E15A4 /* UIntParser.swift */; };
+		F1B40376231D8B9600163CAD /* IntAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800D231C36E1000E15A4 /* IntAsserter.swift */; };
+		F1B40377231D8B9600163CAD /* IntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800E231C36E1000E15A4 /* IntParser.swift */; };
+		F1B40378231D8B9600163CAD /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800F231C36E1000E15A4 /* IntExtension.swift */; };
+		F1B40379231D8B9600163CAD /* NumberAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58010231C36E1000E15A4 /* NumberAsserter.swift */; };
+		F1B4037A231D8B9600163CAD /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58012231C36E1000E15A4 /* FloatExtensions.swift */; };
+		F1B4037B231D8B9600163CAD /* CGFloatAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58014231C36E1000E15A4 /* CGFloatAsserter.swift */; };
+		F1B4037C231D8B9600163CAD /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58015231C36E1000E15A4 /* CGFloatExtension.swift */; };
+		F1B4037D231D8B9600163CAD /* CGFloatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58016231C36E1000E15A4 /* CGFloatParser.swift */; };
+		F1B4037E231D8B9600163CAD /* CGFloatRangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58018231C36E1000E15A4 /* CGFloatRangeParser.swift */; };
+		F1B4037F231D8B9600163CAD /* CGFloatRangeAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58019231C36E1000E15A4 /* CGFloatRangeAsserter.swift */; };
+		F1B40380231D8B9600163CAD /* CGFloatModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801A231C36E1000E15A4 /* CGFloatModifier.swift */; };
+		F1B40381231D8B9600163CAD /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801C231C36E1000E15A4 /* DoubleExtension.swift */; };
+		F1B40382231D8B9600163CAD /* ArithmeticKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801E231C36E1000E15A4 /* ArithmeticKind.swift */; };
+		F1B40383231D8BE100163CAD /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58008231C36E1000E15A4 /* NumberParser.swift */; };
+		F1B40384231D8BE100163CAD /* UIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800A231C36E1000E15A4 /* UIntExtension.swift */; };
+		F1B40385231D8BE100163CAD /* UIntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800B231C36E1000E15A4 /* UIntParser.swift */; };
+		F1B40386231D8BE100163CAD /* IntAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800D231C36E1000E15A4 /* IntAsserter.swift */; };
+		F1B40387231D8BE100163CAD /* IntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800E231C36E1000E15A4 /* IntParser.swift */; };
+		F1B40388231D8BE100163CAD /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800F231C36E1000E15A4 /* IntExtension.swift */; };
+		F1B40389231D8BE100163CAD /* NumberAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58010231C36E1000E15A4 /* NumberAsserter.swift */; };
+		F1B4038A231D8BE100163CAD /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58012231C36E1000E15A4 /* FloatExtensions.swift */; };
+		F1B4038B231D8BE100163CAD /* CGFloatAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58014231C36E1000E15A4 /* CGFloatAsserter.swift */; };
+		F1B4038C231D8BE100163CAD /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58015231C36E1000E15A4 /* CGFloatExtension.swift */; };
+		F1B4038D231D8BE100163CAD /* CGFloatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58016231C36E1000E15A4 /* CGFloatParser.swift */; };
+		F1B4038E231D8BE100163CAD /* CGFloatRangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58018231C36E1000E15A4 /* CGFloatRangeParser.swift */; };
+		F1B4038F231D8BE100163CAD /* CGFloatRangeAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58019231C36E1000E15A4 /* CGFloatRangeAsserter.swift */; };
+		F1B40390231D8BE100163CAD /* CGFloatModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801A231C36E1000E15A4 /* CGFloatModifier.swift */; };
+		F1B40391231D8BE100163CAD /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801C231C36E1000E15A4 /* DoubleExtension.swift */; };
+		F1B40392231D8BE100163CAD /* ArithmeticKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801E231C36E1000E15A4 /* ArithmeticKind.swift */; };
 		F1C58001231C36AC000E15A4 /* NumberSugarMacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F1C57FFF231C36AC000E15A4 /* NumberSugarMacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1C5801F231C36E1000E15A4 /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58008231C36E1000E15A4 /* NumberParser.swift */; };
-		F1C58020231C36E1000E15A4 /* UIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800A231C36E1000E15A4 /* UIntExtension.swift */; };
-		F1C58021231C36E1000E15A4 /* UIntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800B231C36E1000E15A4 /* UIntParser.swift */; };
-		F1C58022231C36E1000E15A4 /* IntAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800D231C36E1000E15A4 /* IntAsserter.swift */; };
-		F1C58023231C36E1000E15A4 /* IntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800E231C36E1000E15A4 /* IntParser.swift */; };
-		F1C58024231C36E1000E15A4 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800F231C36E1000E15A4 /* IntExtension.swift */; };
-		F1C58025231C36E1000E15A4 /* NumberAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58010231C36E1000E15A4 /* NumberAsserter.swift */; };
-		F1C58026231C36E1000E15A4 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58012231C36E1000E15A4 /* FloatExtensions.swift */; };
-		F1C58027231C36E1000E15A4 /* CGFloatAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58014231C36E1000E15A4 /* CGFloatAsserter.swift */; };
-		F1C58028231C36E1000E15A4 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58015231C36E1000E15A4 /* CGFloatExtension.swift */; };
-		F1C58029231C36E1000E15A4 /* CGFloatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58016231C36E1000E15A4 /* CGFloatParser.swift */; };
-		F1C5802A231C36E1000E15A4 /* CGFloatRangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58018231C36E1000E15A4 /* CGFloatRangeParser.swift */; };
-		F1C5802B231C36E1000E15A4 /* CGFloatRangeAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58019231C36E1000E15A4 /* CGFloatRangeAsserter.swift */; };
-		F1C5802C231C36E1000E15A4 /* CGFloatModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801A231C36E1000E15A4 /* CGFloatModifier.swift */; };
-		F1C5802D231C36E1000E15A4 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801C231C36E1000E15A4 /* DoubleExtension.swift */; };
-		F1C5802E231C36E1000E15A4 /* ArithmeticKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801E231C36E1000E15A4 /* ArithmeticKind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1B4036B231D8B8500163CAD /* NumberSugariOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumberSugariOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B4036D231D8B8500163CAD /* NumberSugariOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberSugariOS.h; sourceTree = "<group>"; };
+		F1B4036E231D8B8500163CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C57FFC231C36AC000E15A4 /* NumberSugarMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NumberSugarMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C57FFF231C36AC000E15A4 /* NumberSugarMacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberSugarMacOS.h; sourceTree = "<group>"; };
 		F1C58000231C36AC000E15A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F1B40368231D8B8500163CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1C57FF9231C36AC000E15A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,11 +86,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1B4036C231D8B8500163CAD /* NumberSugariOS */ = {
+			isa = PBXGroup;
+			children = (
+				F1B4036D231D8B8500163CAD /* NumberSugariOS.h */,
+				F1B4036E231D8B8500163CAD /* Info.plist */,
+			);
+			path = NumberSugariOS;
+			sourceTree = "<group>";
+		};
 		F1C57FF2231C36AC000E15A4 = {
 			isa = PBXGroup;
 			children = (
 				F1C58007231C36E1000E15A4 /* src */,
 				F1C57FFE231C36AC000E15A4 /* NumberSugarMacOS */,
+				F1B4036C231D8B8500163CAD /* NumberSugariOS */,
 				F1C57FFD231C36AC000E15A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FFC231C36AC000E15A4 /* NumberSugarMacOS.framework */,
+				F1B4036B231D8B8500163CAD /* NumberSugariOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +205,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		F1B40366231D8B8500163CAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B4036F231D8B8500163CAD /* NumberSugariOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1C57FF7231C36AC000E15A4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +224,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		F1B4036A231D8B8500163CAD /* NumberSugariOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1B40370231D8B8500163CAD /* Build configuration list for PBXNativeTarget "NumberSugariOS" */;
+			buildPhases = (
+				F1B40366231D8B8500163CAD /* Headers */,
+				F1B40367231D8B8500163CAD /* Sources */,
+				F1B40368231D8B8500163CAD /* Frameworks */,
+				F1B40369231D8B8500163CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumberSugariOS;
+			productName = NumberSugariOS;
+			productReference = F1B4036B231D8B8500163CAD /* NumberSugariOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F1C57FFB231C36AC000E15A4 /* NumberSugarMacOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1C58004231C36AC000E15A4 /* Build configuration list for PBXNativeTarget "NumberSugarMacOS" */;
@@ -206,6 +270,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
+					F1B4036A231D8B8500163CAD = {
+						CreatedOnToolsVersion = 10.2;
+					};
 					F1C57FFB231C36AC000E15A4 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -224,11 +291,19 @@
 			projectRoot = "";
 			targets = (
 				F1C57FFB231C36AC000E15A4 /* NumberSugarMacOS */,
+				F1B4036A231D8B8500163CAD /* NumberSugariOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F1B40369231D8B8500163CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1C57FFA231C36AC000E15A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,32 +334,108 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F1B40367231D8B8500163CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B40381231D8B9600163CAD /* DoubleExtension.swift in Sources */,
+				F1B40376231D8B9600163CAD /* IntAsserter.swift in Sources */,
+				F1B4037E231D8B9600163CAD /* CGFloatRangeParser.swift in Sources */,
+				F1B4037F231D8B9600163CAD /* CGFloatRangeAsserter.swift in Sources */,
+				F1B40379231D8B9600163CAD /* NumberAsserter.swift in Sources */,
+				F1B40375231D8B9600163CAD /* UIntParser.swift in Sources */,
+				F1B4037B231D8B9600163CAD /* CGFloatAsserter.swift in Sources */,
+				F1B40373231D8B9600163CAD /* NumberParser.swift in Sources */,
+				F1B40377231D8B9600163CAD /* IntParser.swift in Sources */,
+				F1B4037C231D8B9600163CAD /* CGFloatExtension.swift in Sources */,
+				F1B40380231D8B9600163CAD /* CGFloatModifier.swift in Sources */,
+				F1B4037D231D8B9600163CAD /* CGFloatParser.swift in Sources */,
+				F1B40374231D8B9600163CAD /* UIntExtension.swift in Sources */,
+				F1B4037A231D8B9600163CAD /* FloatExtensions.swift in Sources */,
+				F1B40378231D8B9600163CAD /* IntExtension.swift in Sources */,
+				F1B40382231D8B9600163CAD /* ArithmeticKind.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1C57FF8231C36AC000E15A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C5802D231C36E1000E15A4 /* DoubleExtension.swift in Sources */,
-				F1C58022231C36E1000E15A4 /* IntAsserter.swift in Sources */,
-				F1C5802A231C36E1000E15A4 /* CGFloatRangeParser.swift in Sources */,
-				F1C5802B231C36E1000E15A4 /* CGFloatRangeAsserter.swift in Sources */,
-				F1C58025231C36E1000E15A4 /* NumberAsserter.swift in Sources */,
-				F1C58021231C36E1000E15A4 /* UIntParser.swift in Sources */,
-				F1C58027231C36E1000E15A4 /* CGFloatAsserter.swift in Sources */,
-				F1C5801F231C36E1000E15A4 /* NumberParser.swift in Sources */,
-				F1C58023231C36E1000E15A4 /* IntParser.swift in Sources */,
-				F1C58028231C36E1000E15A4 /* CGFloatExtension.swift in Sources */,
-				F1C5802C231C36E1000E15A4 /* CGFloatModifier.swift in Sources */,
-				F1C58029231C36E1000E15A4 /* CGFloatParser.swift in Sources */,
-				F1C58020231C36E1000E15A4 /* UIntExtension.swift in Sources */,
-				F1C58026231C36E1000E15A4 /* FloatExtensions.swift in Sources */,
-				F1C58024231C36E1000E15A4 /* IntExtension.swift in Sources */,
-				F1C5802E231C36E1000E15A4 /* ArithmeticKind.swift in Sources */,
+				F1B40391231D8BE100163CAD /* DoubleExtension.swift in Sources */,
+				F1B40386231D8BE100163CAD /* IntAsserter.swift in Sources */,
+				F1B4038E231D8BE100163CAD /* CGFloatRangeParser.swift in Sources */,
+				F1B4038F231D8BE100163CAD /* CGFloatRangeAsserter.swift in Sources */,
+				F1B40389231D8BE100163CAD /* NumberAsserter.swift in Sources */,
+				F1B40385231D8BE100163CAD /* UIntParser.swift in Sources */,
+				F1B4038B231D8BE100163CAD /* CGFloatAsserter.swift in Sources */,
+				F1B40383231D8BE100163CAD /* NumberParser.swift in Sources */,
+				F1B40387231D8BE100163CAD /* IntParser.swift in Sources */,
+				F1B4038C231D8BE100163CAD /* CGFloatExtension.swift in Sources */,
+				F1B40390231D8BE100163CAD /* CGFloatModifier.swift in Sources */,
+				F1B4038D231D8BE100163CAD /* CGFloatParser.swift in Sources */,
+				F1B40384231D8BE100163CAD /* UIntExtension.swift in Sources */,
+				F1B4038A231D8BE100163CAD /* FloatExtensions.swift in Sources */,
+				F1B40388231D8BE100163CAD /* IntExtension.swift in Sources */,
+				F1B40392231D8BE100163CAD /* ArithmeticKind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F1B40371231D8B8500163CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NumberSugariOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.NumberSugariOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1B40372231D8B8500163CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NumberSugariOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.NumberSugariOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		F1C58002231C36AC000E15A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -459,6 +610,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F1B40370231D8B8500163CAD /* Build configuration list for PBXNativeTarget "NumberSugariOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1B40371231D8B8500163CAD /* Debug */,
+				F1B40372231D8B8500163CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1C57FF6231C36AC000E15A4 /* Build configuration list for PBXProject "NumberSugarMacOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
