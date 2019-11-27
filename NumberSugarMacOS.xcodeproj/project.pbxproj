@@ -6,30 +6,7 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		F15C5357238E7ACA00E60B30 /* NumberSugarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15C5356238E7ACA00E60B30 /* NumberSugarTest.swift */; };
-		F1DD696F238E7E1C00AD4189 /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58008231C36E1000E15A4 /* NumberParser.swift */; };
-		F1DD6970238E7E1C00AD4189 /* UIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800A231C36E1000E15A4 /* UIntExtension.swift */; };
-		F1DD6971238E7E1C00AD4189 /* UIntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800B231C36E1000E15A4 /* UIntParser.swift */; };
-		F1DD6972238E7E1C00AD4189 /* IntAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800D231C36E1000E15A4 /* IntAsserter.swift */; };
-		F1DD6973238E7E1C00AD4189 /* IntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800E231C36E1000E15A4 /* IntParser.swift */; };
-		F1DD6974238E7E1C00AD4189 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5800F231C36E1000E15A4 /* IntExtension.swift */; };
-		F1DD6975238E7E1C00AD4189 /* NumberAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58010231C36E1000E15A4 /* NumberAsserter.swift */; };
-		F1DD6976238E7E1C00AD4189 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58012231C36E1000E15A4 /* FloatExtensions.swift */; };
-		F1DD6977238E7E1C00AD4189 /* CGFloatAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58014231C36E1000E15A4 /* CGFloatAsserter.swift */; };
-		F1DD6978238E7E1C00AD4189 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58015231C36E1000E15A4 /* CGFloatExtension.swift */; };
-		F1DD6979238E7E1C00AD4189 /* CGFloatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58016231C36E1000E15A4 /* CGFloatParser.swift */; };
-		F1DD697A238E7E1C00AD4189 /* CGFloatRangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58018231C36E1000E15A4 /* CGFloatRangeParser.swift */; };
-		F1DD697B238E7E1C00AD4189 /* CGFloatRangeAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C58019231C36E1000E15A4 /* CGFloatRangeAsserter.swift */; };
-		F1DD697C238E7E1C00AD4189 /* CGFloatModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801A231C36E1000E15A4 /* CGFloatModifier.swift */; };
-		F1DD697D238E7E1C00AD4189 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801C231C36E1000E15A4 /* DoubleExtension.swift */; };
-		F1DD697E238E7E1C00AD4189 /* ArithmeticKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5801E231C36E1000E15A4 /* ArithmeticKind.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		F15C5354238E7ACA00E60B30 /* NumberSugarTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberSugarTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F15C5356238E7ACA00E60B30 /* NumberSugarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSugarTest.swift; sourceTree = "<group>"; };
-		F15C5358238E7ACA00E60B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C58008231C36E1000E15A4 /* NumberParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberParser.swift; sourceTree = "<group>"; };
 		F1C5800A231C36E1000E15A4 /* UIntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIntExtension.swift; sourceTree = "<group>"; };
 		F1C5800B231C36E1000E15A4 /* UIntParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIntParser.swift; sourceTree = "<group>"; };
@@ -47,16 +24,6 @@
 		F1C5801C231C36E1000E15A4 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		F1C5801E231C36E1000E15A4 /* ArithmeticKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticKind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		F15C5351238E7ACA00E60B30 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F15C534D238E7AA000E60B30 /* Sources */ = {
@@ -82,20 +49,10 @@
 			path = NumberSugar;
 			sourceTree = "<group>";
 		};
-		F15C5355238E7ACA00E60B30 /* NumberSugarTest */ = {
-			isa = PBXGroup;
-			children = (
-				F15C5356238E7ACA00E60B30 /* NumberSugarTest.swift */,
-				F15C5358238E7ACA00E60B30 /* Info.plist */,
-			);
-			path = NumberSugarTest;
-			sourceTree = "<group>";
-		};
 		F1C57FF2231C36AC000E15A4 = {
 			isa = PBXGroup;
 			children = (
 				F15C534D238E7AA000E60B30 /* Sources */,
-				F15C5355238E7ACA00E60B30 /* NumberSugarTest */,
 				F1C57FFD231C36AC000E15A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,7 +60,6 @@
 		F1C57FFD231C36AC000E15A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F15C5354238E7ACA00E60B30 /* NumberSugarTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,26 +130,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		F15C5353238E7ACA00E60B30 /* NumberSugarTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F15C5359238E7ACA00E60B30 /* Build configuration list for PBXNativeTarget "NumberSugarTest" */;
-			buildPhases = (
-				F15C5350238E7ACA00E60B30 /* Sources */,
-				F15C5351238E7ACA00E60B30 /* Frameworks */,
-				F15C5352238E7ACA00E60B30 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NumberSugarTest;
-			productName = NumberSugarTest;
-			productReference = F15C5354238E7ACA00E60B30 /* NumberSugarTest.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
 /* Begin PBXProject section */
 		F1C57FF3231C36AC000E15A4 /* Project object */ = {
 			isa = PBXProject;
@@ -201,11 +137,6 @@
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = FutureLab;
-				TargetAttributes = {
-					F15C5353238E7ACA00E60B30 = {
-						CreatedOnToolsVersion = 11.2;
-					};
-				};
 			};
 			buildConfigurationList = F1C57FF6231C36AC000E15A4 /* Build configuration list for PBXProject "NumberSugarMacOS" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -220,85 +151,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F15C5353238E7ACA00E60B30 /* NumberSugarTest */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		F15C5352238E7ACA00E60B30 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		F15C5350238E7ACA00E60B30 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1DD697E238E7E1C00AD4189 /* ArithmeticKind.swift in Sources */,
-				F1DD6973238E7E1C00AD4189 /* IntParser.swift in Sources */,
-				F1DD6977238E7E1C00AD4189 /* CGFloatAsserter.swift in Sources */,
-				F1DD6975238E7E1C00AD4189 /* NumberAsserter.swift in Sources */,
-				F1DD6976238E7E1C00AD4189 /* FloatExtensions.swift in Sources */,
-				F1DD697A238E7E1C00AD4189 /* CGFloatRangeParser.swift in Sources */,
-				F1DD6972238E7E1C00AD4189 /* IntAsserter.swift in Sources */,
-				F1DD6974238E7E1C00AD4189 /* IntExtension.swift in Sources */,
-				F1DD6971238E7E1C00AD4189 /* UIntParser.swift in Sources */,
-				F1DD697D238E7E1C00AD4189 /* DoubleExtension.swift in Sources */,
-				F1DD6970238E7E1C00AD4189 /* UIntExtension.swift in Sources */,
-				F15C5357238E7ACA00E60B30 /* NumberSugarTest.swift in Sources */,
-				F1DD696F238E7E1C00AD4189 /* NumberParser.swift in Sources */,
-				F1DD697B238E7E1C00AD4189 /* CGFloatRangeAsserter.swift in Sources */,
-				F1DD697C238E7E1C00AD4189 /* CGFloatModifier.swift in Sources */,
-				F1DD6978238E7E1C00AD4189 /* CGFloatExtension.swift in Sources */,
-				F1DD6979238E7E1C00AD4189 /* CGFloatParser.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
 /* Begin XCBuildConfiguration section */
-		F15C535A238E7ACA00E60B30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = NumberSugarTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.NumberSugarTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		F15C535B238E7ACA00E60B30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = NumberSugarTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.NumberSugarTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		F1C58002231C36AC000E15A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -423,15 +280,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F15C5359238E7ACA00E60B30 /* Build configuration list for PBXNativeTarget "NumberSugarTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F15C535A238E7ACA00E60B30 /* Debug */,
-				F15C535B238E7ACA00E60B30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F1C57FF6231C36AC000E15A4 /* Build configuration list for PBXProject "NumberSugarMacOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
