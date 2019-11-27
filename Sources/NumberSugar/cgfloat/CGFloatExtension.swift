@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 
 var NaN: CGFloat = .nan/*Global variable for the sake of convenience*/
 

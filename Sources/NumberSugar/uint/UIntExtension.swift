@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 
 extension UInt {
     public var cgFloat: CGFloat { return CGFloat(self) }/*Convenince*/

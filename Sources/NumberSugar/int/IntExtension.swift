@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * Don't add Int.init code that auto casts. like: let i: Int = 40.5//40 via ExpressibleByFloatLiteral and FloatLiteralType. It will accidentally break I.E Animator.swift
  */

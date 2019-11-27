@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 
 extension Float {
    public var int: Int { return Int(self) }

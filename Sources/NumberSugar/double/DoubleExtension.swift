@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 
 extension Double {
     public var cgFloat: CGFloat { return CGFloat(self) }

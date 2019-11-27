@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * Experimental
  * - Fixme: ⚠️️ ⚠️️ Add more operators *= -= += /= etc
