@@ -5,3 +5,6 @@
 
 # NumberSugar
 Sugar for numbers
+
+### Installation:
+- SPM `"https://github.com/eonist/numbersugar.git"` branch: `"master"`

@@ -57,7 +57,7 @@ extension IOSTest {
     * intParserTests
     */
    private static func intParserTests() {
-      XCTAssertTrue([0,1,2,3].contains(IntParser.random(0, 3)))
+      XCTAssertTrue([0, 1, 2, 3].contains(IntParser.random(0, 3)))
       XCTAssertEqual(IntParser.normalize(3, 7), 3)
       XCTAssertEqual(IntParser.normalize(-3, 7), 4)
       XCTAssertEqual(IntParser.normalize(0, 7), 0)
@@ -67,8 +67,8 @@ extension IOSTest {
       XCTAssertEqual(IntParser.minMax([8, -6, 2, 109, 3, 71])?.min, -6) //
       XCTAssertEqual(IntParser.minMax([8, -6, 2, 109, 3, 71])?.max, 109) //
       XCTAssertEqual(IntParser.max([1, 2, 3, 10, 100]), 100)
-      XCTAssertEqual(IntParser.digitCount(99), 2) 
-      XCTAssertEqual(IntParser.digitCount(9), 1) 
+      XCTAssertEqual(IntParser.digitCount(99), 2)
+      XCTAssertEqual(IntParser.digitCount(9), 1)
       XCTAssertEqual(IntParser.digitCount(999), 3)
    }
    /**
@@ -100,22 +100,22 @@ extension IOSTest {
     * cgFloatParserTests
     */
    private static func cgFloatParserTests() {
-      XCTAssertEqual(CGFloatParser.approx(40.126,2), 40.13)
-      XCTAssertEqual(CGFloatParser.approx(40.124,2), 40.12)
-      XCTAssertEqual(CGFloatParser.difference(3,7), 4)//
-      XCTAssertEqual(CGFloatParser.difference(3,-2), -5)//
-      XCTAssertEqual(CGFloatParser.difference(-3,-7), -4)//
-      XCTAssertEqual(CGFloatParser.difference(-3,7), 10)//
+      XCTAssertEqual(CGFloatParser.approx(40.126, 2), 40.13)
+      XCTAssertEqual(CGFloatParser.approx(40.124, 2), 40.12)
+      XCTAssertEqual(CGFloatParser.difference(3, 7), 4)//
+      XCTAssertEqual(CGFloatParser.difference(3, -2), -5)//
+      XCTAssertEqual(CGFloatParser.difference(-3, -7), -4)//
+      XCTAssertEqual(CGFloatParser.difference(-3, 7), 10)//
       XCTAssertEqual(CGFloatParser.interpolate(5, 15, 0.5), 10) //
       XCTAssertEqual(CGFloatParser.interpolate(-150.0, -375.0, 0.1), -172.5) //, also works on negative values 👌
-      XCTAssertEqual(CGFloatParser.scalar(0,8,4), 0.5) //Output:
+      XCTAssertEqual(CGFloatParser.scalar(0, 8, 4), 0.5) //Output:
       XCTAssertEqual(CGFloatParser.scalar(0, -100, -25), 0.25);//
       XCTAssertEqual(CGFloatParser.scalar(-200, -100, -150), 0.5);//
       XCTAssertEqual(CGFloatParser.scalar(5, 10, 7.5), 0.5);//
-      XCTAssertEqual(CGFloatParser.distance(-5,-2), 3);//
-      XCTAssertEqual(CGFloatParser.distance(-5,2), 7);//
-      XCTAssertEqual(CGFloatParser.distance(5,2), 3);//
-      XCTAssertEqual(CGFloatParser.distance(5,-2), 7);//
+      XCTAssertEqual(CGFloatParser.distance(-5, -2), 3);//
+      XCTAssertEqual(CGFloatParser.distance(-5, 2), 7);//
+      XCTAssertEqual(CGFloatParser.distance(5, 2), 3);//
+      XCTAssertEqual(CGFloatParser.distance(5, -2), 7);//
       XCTAssertEqual(CGFloatParser.loop(20, 0, 10), 0);//
       XCTAssertEqual(CGFloatParser.loop(-2, -5, 10), 8);//
       XCTAssertEqual(CGFloatParser.interpolatedRange(0, 1, 3), [0.0, 0.5, 1.0])//
@@ -135,4 +135,3 @@ extension IOSTest {
       XCTAssertEqual(CGFloatModifier.roundTo(0, 45), 0); //
    }
 }
-  
