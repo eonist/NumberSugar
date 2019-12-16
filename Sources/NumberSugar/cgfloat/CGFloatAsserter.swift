@@ -8,17 +8,20 @@ public class CGFloatAsserter {
    /**
     * Return: true if number is odd
     * ## Examples:
-    * print(NumberAsserter.odd(0));//false
-    * print(NumberAsserter.odd(1));//true
-    * print(NumberAsserter.odd(2));//false
-    * print(NumberAsserter.odd(3));//true
-    * print(NumberAsserter.odd(4));//false
+    * print(CGFloatAsserter.odd(0)) // false
+    * print(CGFloatAsserter.odd(1)) // true
+    * print(CGFloatAsserter.odd(2)) // false
+    * print(CGFloatAsserter.odd(3)) // true
+    * print(CGFloatAsserter.odd(4)) // false
     */
    public static func odd(_ number: CGFloat) -> Bool {
       return (number %% 2) != 0.0
    }
    /**
-    * ## Examples: event(0), even(2), even(4)
+    * ## Examples:
+    * even(0) true
+    * even(2) true
+    * even(5) false
     */
    public static func even(_ number: CGFloat) -> Bool {
       return !odd(number)
@@ -38,11 +41,12 @@ public class CGFloatAsserter {
    /**
     * UnLike isNear, this returns true for cases where the value is within epsilon and on epsiolon, see examples bellow:
     * - Note: The computation is also simpler and faster
-    * ## Examples: near(40, 50, 10) // true
-    * ## Examples: near(-40, -50, 10) // true
-    * ## Examples: near(-10, 0, 10) // true
-    * ## Examples: near(10, 0, 10) // true
-    * ## Examples: near(-60, -50, 10) // true
+    * ## Examples:
+    * near(40, 50, 10) // true
+    * near(-40, -50, 10) // true
+    * near(-10, 0, 10) // true
+    * near(10, 0, 10) // true
+    * near(-60, -50, 10) // true
     */
    public static func near(_ a: CGFloat, _ b: CGFloat, _ epsilon: CGFloat) -> Bool {
       return abs(a - b) <= epsilon

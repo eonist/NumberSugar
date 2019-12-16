@@ -7,11 +7,12 @@ public class CGFloatParser {
     * - Note: unlike the tofixed method that returns this: Number(6.0001).toFixed(2)// 6.01, the aprox method returns a more clinical number
     * - Note: the approx method does not Round up or down by taking into account the decimal after the PARAM: decimalCount, this could be usefull in the future
     * - Note: the approx method works exactly as the aproximatly equal sign in real math except the part about rounding up and down, and by the way toFixed method does not handle the rounding correctly eigther as it rounds from futher then next to PARAM: decimalCount
-    * ## Examples: NumberParser.approx(Math.cos(Trig.RAD*90), 22)//6.12323e-17
-    * ## Examples: NumberParser.approx(Math.cos(Trig.RAD*90), 3)//0
-    * ## Examples: approx(40.126,2)//40.13
-    * ## Examples: approx(40.124,2)//40.12
-    * CAUTION: the old approx method was a little different. try stackoverflow if this design doesn't work in every case
+    * ## Examples:
+    * NumberParser.approx(Math.cos(Trig.RAD*90), 22)//6.12323e-17
+    * NumberParser.approx(Math.cos(Trig.RAD*90), 3)//0
+    * NumberParser.approx(40.126,2)//40.13
+    * NumberParser.approx(40.124,2)//40.12
+    * - Caution: ⚠️️ the old approx method was a little different. try stackoverflow if this design doesn't work in every case
     */
    public static func approx(_ number: CGFloat, _ decimalCount: Int) -> CGFloat {
       let format = NSString(format: "%%.%if", decimalCount)
@@ -51,9 +52,10 @@ public class CGFloatParser {
    }
    /**
     * Linearly interpolation (lerp)
-    * - Parameter: a: start number
-    * - Parameter: b: end number
-    * - Parameter: fraction: interpolation value (between 0 - 1) could also be named scalar
+    * - Parameters:
+    *   - a: start number
+    *   - b: end number
+    *   - fraction: interpolation value (between 0 - 1) could also be named scalar
     * ## Examples:
     * interpolate(5, 15, 0.5) //10
     * interpolate(a: -150.0, b: -375.0, fraction: 0.1)//-172.5, also works on negative values 👌
@@ -65,10 +67,12 @@ public class CGFloatParser {
     * Returns the scalar value from the real progress between two polar numbers
     * Return: interpolation value between if transition value is within range it will be between 0 and 1 (scalar amount)
     * - Note: to find a scalar value i.e 50/100 = 0.5
-    * PARAM: start: start number
-    * PARAM: end: end number
-    * PARAM: progress progress between a and b
-    * ## Examples: scalar(0,8,4) //Output: 0.5
+    * - Parameters:
+    *   - start: start number
+    *   - end: end number
+    *   - progress: progress between a and b
+    * ## Examples:
+    * scalar(0,8,4) //Output: 0.5
     * print("q: " + NumberParser.scalar(0, -100, -25));//0.25
     * print("q: " + NumberParser.scalar(-200, -100, -150));//0.5
     * print("q: " + NumberParser.scalar(5, 10, 7.5));//0.5
@@ -142,7 +146,8 @@ public class CGFloatParser {
    }
    /**
     * Returns an a array of interpolated numbers between min and max
-    * ## Examples: CGFloatParser.interpolatedRange(0, 1, 3)//[0.0, 0.5, 1.0]
+    * ## Examples:
+    * CGFloatParser.interpolatedRange(0, 1, 3)//[0.0, 0.5, 1.0]
     */
    public static func interpolatedRange(_ min: CGFloat, _ max: CGFloat, _ length: Int) -> [CGFloat] {
       var interpolatedRange: [CGFloat] = []
@@ -162,8 +167,9 @@ public class CGFloatParser {
    }
    /**
     * - Note: The example below calculates the arithmetic mean (also known as the average) for a list of numbers of any length
-    * ## Examples: average([1, 2, 3, 4, 5])// returns 3.0, which is the arithmetic mean of these five numbers
-    * ## Examples: average([3, 8.25, 18.75])// returns 10.0, which is the arithmetic mean of these three numbers
+    * ## Examples:
+    * average([1, 2, 3, 4, 5])// returns 3.0, which is the arithmetic mean of these five numbers
+    * average([3, 8.25, 18.75])// returns 10.0, which is the arithmetic mean of these three numbers
     */
    public static func average(_ nums: [CGFloat]) -> CGFloat {
       return nums.isEmpty ? 0 : nums.reduce(0, +) / nums.count.cgFloat

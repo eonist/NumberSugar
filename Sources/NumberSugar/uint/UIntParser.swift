@@ -23,7 +23,8 @@ public class UIntParser {
    /**
     * Adds a zero infront of a number
     * - Fixme: ⚠️️ refactor this code when you have time
-    * ## Examples: Swift.print(UIntParser.digit(9, 2))
+    * ## Examples: 
+    * Swift.print(UIntParser.digit(9, 2))
     */
    public static func digit(_ n: UInt, _ numOfDigits: Int) -> String {
       let stringNum: String = .init(n)

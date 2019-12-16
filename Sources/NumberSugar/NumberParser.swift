@@ -4,16 +4,18 @@ public class NumberParser {
    /**
     * Pins a value between min and max
     * - Note: the Comparable part is support for more than or less than operators "<" and ">" Equatable would be "=="
-    * ## Examples: minMax(100, 200, 400) // Output: 200
-    * ## Examples: minMax(500, 200, 400) // Output: 400
-    * ## Examples: minMax(300, 200, 400) // Output: 300
+    * ## Examples:
+    * minMax(100, 200, 400) // Output: 200
+    * minMax(500, 200, 400) // Output: 400
+    * minMax(300, 200, 400) // Output: 300
     */
    public static func minMax<T: Comparable>(_ num: T, _ min: T, _ max: T) -> T {
       return Swift.max(min, Swift.min(max, num))
    }
    /**
     * Returns the count of decimals in a number
-    * ## Examples: NumberParser.decimals(4.433)//Output: 3
+    * ## Examples:
+    * NumberParser.decimals(4.433)//Output: 3
     */
    public static func decimals<T: Comparable>(_ number: T) -> Int {//could also be named decimalPLaces
       let matches: [String] = String(describing: number).split(separator: ".").map { String($0) }

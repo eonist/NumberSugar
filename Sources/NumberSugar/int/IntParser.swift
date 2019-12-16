@@ -3,8 +3,9 @@ import Foundation
 public class IntParser {
    /**
     * Return a  Random number within a min max value
-    * ## Examples: IntParser.random(0,3)//Can return either of: 0,1,2,3
-    @ - Important: You now have the native `let randomInt = Int.random(in: 1..<5)`
+    * ## Examples:
+    * IntParser.random(0, 3) // Can return either of: 0,1,2,3
+    * - Important: ⚠️️ You now have the native: `let randomInt = Int.random(in: 1..<5)`
     */
    public static func random(_ min: Int, _ max: Int) -> Int {//returns an integer between 0 - x
       return Int.random(in: min..<max)//--Int(arc4random_uniform(UInt32(max)) + UInt32(min))
@@ -24,36 +25,30 @@ public class IntParser {
     */
    public static func normalize(_ index: Int, _ len: Int) -> Int {
       if index >= 0 {
-         if index < len {
-            return index
-         } else {
-            return index % len
-         }
+         return index < len ? index : index % len
       } else {
-         if index % len == 0 {
-            return 0
-         } else {
-            return len + (index % len)
-         }
+         return index % len == 0 ? 0 : len + (index % len)
       }
    }
+   public enum IntKind: String { case zero, posetive, negative }
    /**
-    * - Fixme: ⚠️️ ⚠️️ Return enum
+    * IntKind
     */
-   public static func kind(_ theInt: Int) -> String {
+   public static func kind(_ theInt: Int) -> IntKind {
       switch theInt {
       case 0:
-         return "Zero"
-      case let x where x > 0://<--where is a constraint, must be true
-         return "Positive"
+         return .zero
+      case let x where x > 0: // <--where is a constraint, must be true
+         return .posetive
       default:
-         return "Negative"
+         return .negative
       }
    }
    /**
-    * ## Examples: minMax([8, -6, 2, 109, 3, 71])//(-6,109)
-    * ## Examples: minMax([8, -6, 2, 109, 3, 71]).min //-6
-    * ## Examples: minMax([8, -6, 2, 109, 3, 71]).max //109
+    * ## Examples:
+    * minMax([8, -6, 2, 109, 3, 71])// (-6, 109)
+    * minMax([8, -6, 2, 109, 3, 71]).min // -6
+    * minMax([8, -6, 2, 109, 3, 71]).max // 109
     */
    public static func minMax(_ array: [Int]) -> (min: Int, max: Int)? {
       if array.isEmpty { return nil }
@@ -70,7 +65,8 @@ public class IntParser {
    }
    /**
     * Returns the max int value in PARAM: ints
-    * ## Examples: max([1, 2, 3, 10, 100])
+    * ## Examples:
+    * max([1, 2, 3, 10, 100])
     * - Note: Native [1, 5, 2, 9, 4].maxElement() ? might be better?
     */
    public static func max(_ ints: [Int]) -> Int {
@@ -88,9 +84,9 @@ public class IntParser {
    /**
     * Returns the number of digits in a number
     * ## Examples:
-    * digitCount(99)//2
-    * digitCount(9)//1
-    * digitCount(999)//3
+    * digitCount(99) // 2
+    * digitCount(9) // 1
+    * digitCount(999) // 3
     * - - Note: Uses Algebraic math
     * - - Note: Can also be done by converting to a string and counting chars
     */
