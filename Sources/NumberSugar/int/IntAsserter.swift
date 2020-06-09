@@ -18,5 +18,5 @@ public class IntAsserter {
    /**
     * random true or flase
     */
-   public var eitherOr: Bool { return Bool.random() }//{return arc4random_uniform(2) == 0}
+   public var eitherOr: Bool { Bool.random() }//{return arc4random_uniform(2) == 0}
 }

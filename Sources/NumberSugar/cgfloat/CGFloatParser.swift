@@ -31,7 +31,7 @@ public class CGFloatParser {
     * - Fixme: ⚠️️ add an option for multiplication minus and dividens
     */
    public static func sum(_ numbers: [CGFloat]) -> CGFloat {
-      return numbers.reduce(0) { $0 + $1 }
+      numbers.reduce(0) { $0 + $1 }
    }
    /**
     * Returns the number you can add to start that becomes end (start + x = end)
@@ -61,7 +61,7 @@ public class CGFloatParser {
     * interpolate(a: -150.0, b: -375.0, fraction: 0.1)//-172.5, also works on negative values 👌
     */
    public static func interpolate(_ a: CGFloat, _ b: CGFloat, _ fraction: CGFloat) -> CGFloat {
-      return fraction * (b - a) + a
+      fraction * (b - a) + a
    }
    /**
     * Returns the scalar value from the real progress between two polar numbers
@@ -110,7 +110,7 @@ public class CGFloatParser {
     * Returns the difference between a and b (the returning number can be negative or posetive or zero)
     */
    public static func relativeDifference(_ a: CGFloat, _ b: CGFloat) -> CGFloat {
-      return b - a
+      b - a
    }
    /**
     * Returns a constant looping number, really great when making looping slideshows
@@ -172,7 +172,7 @@ public class CGFloatParser {
     * average([3, 8.25, 18.75])// returns 10.0, which is the arithmetic mean of these three numbers
     */
    public static func average(_ nums: [CGFloat]) -> CGFloat {
-      return nums.isEmpty ? 0 : nums.reduce(0, +) / nums.count.cgFloat
+      nums.isEmpty ? 0 : nums.reduce(0, +) / nums.count.cgFloat
       /*var total: CGFloat = 0
        for number in numbers {total += number}
        return total / CGFloat(numbers.count)*/

@@ -18,7 +18,7 @@ public class UIntParser {
     * print(UintParser.normalize(8, 4));//0
     */
    public static func normalize(_ index: UInt, _ len: UInt) -> UInt {
-      return index < len ? index : index % len
+      index < len ? index : index % len
    }
    /**
     * Adds a zero infront of a number

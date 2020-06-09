@@ -91,6 +91,6 @@ public class IntParser {
     * - - Note: Can also be done by converting to a string and counting chars
     */
    public static func digitCount(_ n: Int) -> Int {
-      return Int(log2(Double(n)) / log2(10.0)) + 1
+      Int(log2(Double(n)) / log2(10.0)) + 1
    }
 }

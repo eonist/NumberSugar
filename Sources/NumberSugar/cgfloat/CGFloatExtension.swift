@@ -3,33 +3,33 @@ import CoreGraphics
 var NaN: CGFloat = .nan/*Global variable for the sake of convenience*/
 
 extension CGFloat {
-   public func toFixed(_ places: Int) -> CGFloat { return CGFloatModifier.toFixed(self, places) }
-   public func isNear(_ value: CGFloat, _ epsilon: CGFloat = 10e-12) -> Bool { return CGFloatAsserter.isNear(self, value, epsilon) }
-   public var uint: UInt { return UInt(self) }
-   public var int: Int { return Int(self) }
-   public var float: Float { return Float(self) }
-   public var string: String { return String(describing: self) }
-   public var str: String { return String(describing: self) }/*shorthand*/
-   public var isNegative: Bool { return NumberAsserter.negative(self, 0) }
-   public var isPositive: Bool { return NumberAsserter.positive(self, 0) }
-   public var positive: CGFloat { return abs(self) }//new
-   public var negative: CGFloat { return -abs(self) }//new
-   public func clip(_ min: CGFloat, _ max: CGFloat) -> CGFloat { return NumberParser.clip(self, min, max) }/*Convenince*/
-   public func interpolate(_ to: CGFloat, _ scalar: CGFloat) -> CGFloat { return CGFloatParser.interpolate(self, to, scalar) }
-   public func roundTo(_ closest: CGFloat) -> CGFloat { return CGFloatModifier.roundTo(self, closest) }/*Convenince*/
+   public func toFixed(_ places: Int) -> CGFloat { CGFloatModifier.toFixed(self, places) }
+   public func isNear(_ value: CGFloat, _ epsilon: CGFloat = 10e-12) -> Bool { CGFloatAsserter.isNear(self, value, epsilon) }
+   public var uint: UInt { UInt(self) }
+   public var int: Int { Int(self) }
+   public var float: Float { Float(self) }
+   public var string: String { String(describing: self) }
+   public var str: String { String(describing: self) }/*shorthand*/
+   public var isNegative: Bool { NumberAsserter.negative(self, 0) }
+   public var isPositive: Bool { NumberAsserter.positive(self, 0) }
+   public var positive: CGFloat { abs(self) }//new
+   public var negative: CGFloat { -abs(self) }//new
+   public func clip(_ min: CGFloat, _ max: CGFloat) -> CGFloat { NumberParser.clip(self, min, max) }/*Convenince*/
+   public func interpolate(_ to: CGFloat, _ scalar: CGFloat) -> CGFloat { CGFloatParser.interpolate(self, to, scalar) }
+   public func roundTo(_ closest: CGFloat) -> CGFloat { CGFloatModifier.roundTo(self, closest) }/*Convenince*/
    /**
     * CGFloat(10).min(5)//5
     * CGFloat(10).min(15)//10
     */
    public func min(_ min: CGFloat) -> CGFloat {
-      return Swift.min(self, min)
+      Swift.min(self, min)
    }
    public func max(_ max: CGFloat) -> CGFloat {
-      return Swift.max(self, max)
+      Swift.max(self, max)
    }
 }
 extension Sequence where Iterator.Element == CGFloat {
-   public var average: CGFloat { return CGFloatParser.average(self as! [CGFloat]) }
+   public var average: CGFloat { CGFloatParser.average(self as! [CGFloat]) }
 }
 /*extension Array where Element == CGFloat{
  
@@ -57,19 +57,19 @@ extension Bool {
  */
 extension CGFloat {
    public static func + (left: CGFloat, right: Double) -> CGFloat {
-      return left + CGFloat(right)
+      left + CGFloat(right)
    }
    /**
     * Support for addition of CGFLoat and Double
     */
    public static func + (left: Double, right: CGFloat) -> CGFloat {
-      return CGFloat(left) + right
+      CGFloat(left) + right
    }
    public static func * (left: Int, right: CGFloat) -> CGFloat {
-      return CGFloat(left) * right
+      CGFloat(left) * right
    }
    public static func * (left: CGFloat, right: Int) -> CGFloat {
-      return left * CGFloat(right)
+      left * CGFloat(right)
    }
    /**
     * Brings back simple modulo syntax (was removed in swift 3)
@@ -84,7 +84,7 @@ extension CGFloat {
     * - Note: there is also .remainder which supports returning negatives as oppose to truncatingRemainder (aka the old %) which returns only positive. .remiander also behaves diferently with negative values. Sometimes more usefully so
     */
    public static func %% (left: CGFloat, right: CGFloat) -> CGFloat {
-      return left.truncatingRemainder(dividingBy: right)
+      left.truncatingRemainder(dividingBy: right)
    }
 }
 infix operator %%/*<--infix operator is required for custom infix char combos*/

@@ -20,14 +20,14 @@ extension CGFloat: ArithmeticKind {}
 //extension Double: NumberKind {}
 //extension UInt: NumberKind {}
 func add<T: ArithmeticKind>(x: T, y: T) -> T {
-    return x + y
+   x + y
 }
 func substract<T: ArithmeticKind>(x: T, y: T) -> T {
-    return x - y
+   x - y
 }
 func divide<T: ArithmeticKind>(x: T, y: T) -> T {
-    return x / y
+   x / y
 }
 func multiply<T: ArithmeticKind>(x: T, y: T) -> T {
-    return x * y
+   x * y
 }

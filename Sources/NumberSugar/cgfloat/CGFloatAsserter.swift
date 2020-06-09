@@ -15,7 +15,7 @@ public class CGFloatAsserter {
     * print(CGFloatAsserter.odd(4)) // false
     */
    public static func odd(_ number: CGFloat) -> Bool {
-      return (number %% 2) != 0.0
+      (number %% 2) != 0.0
    }
    /**
     * ## Examples:
@@ -24,7 +24,7 @@ public class CGFloatAsserter {
     * even(5) false
     */
    public static func even(_ number: CGFloat) -> Bool {
-      return !odd(number)
+      !odd(number)
    }
    /**
     * - - Note: You can do Swift.abs(4.1 - 4.0) <= 0.1 // true,where 0.1 is the epsilon (also works for negative values)
@@ -49,18 +49,18 @@ public class CGFloatAsserter {
     * near(-60, -50, 10) // true
     */
    public static func near(_ a: CGFloat, _ b: CGFloat, _ epsilon: CGFloat) -> Bool {
-      return abs(a - b) <= epsilon
+      abs(a - b) <= epsilon
    }
    /**
     * - Note: unlike the native "==" method this method supports NaN values
     */
    public static func equals(_ a: CGFloat, _ b: CGFloat) -> Bool {
-      return (a.isNaN && b.isNaN) || a == b
+      (a.isNaN && b.isNaN) || a == b
    }
    /**
     * - Note: you can also use Number.NEGATIVE_INFINITY and Number.POSITIVE_INFINITY
     */
    public static func isInfinity(_ number: CGFloat) -> Bool {
-      return number == CGFloat.infinity || number == -CGFloat.infinity
+      number == CGFloat.infinity || number == -CGFloat.infinity
    }
 }

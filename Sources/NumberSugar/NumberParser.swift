@@ -10,7 +10,7 @@ public class NumberParser {
     * minMax(300, 200, 400) // Output: 300
     */
    public static func minMax<T: Comparable>(_ num: T, _ min: T, _ max: T) -> T {
-      return Swift.max(min, Swift.min(max, num))
+      Swift.max(min, Swift.min(max, num))
    }
    /**
     * Returns the count of decimals in a number
@@ -27,14 +27,14 @@ public class NumberParser {
     * - Note: Swift.max can be used, but this function supports arrays Math.max doesnt, however you can use as many arguments you want with the Swift.max function
     */
    public static func max<T: Comparable>(_ numbers: [T]) -> T {
-      return numbers.max() ?? 0 as! T
+      numbers.max() ?? 0 as! T
    }
    /**
     * Returns the lowest number in a list of numbers
     * - Note: Swift.min can be used, but this function supports arrays Swift.Min doesn't
     */
    public static func min<T: Comparable>(_ numbers: [T]) -> T {
-      return numbers.min() ?? 0 as! T
+      numbers.min() ?? 0 as! T
    }
    /**
     * Returns the floor and ceil of many numbers
@@ -55,5 +55,5 @@ public class NumberParser {
    /**
     * Clips a value between min and max (optional name: clamp)
     */
-   public static func clip<T: Comparable>(_ val: T, _ min: T, _ max: T) -> T { return minMax(val, min, max) }
+   public static func clip<T: Comparable>(_ val: T, _ min: T, _ max: T) -> T { minMax(val, min, max) }
 }

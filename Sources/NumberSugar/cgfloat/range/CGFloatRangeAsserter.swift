@@ -7,7 +7,7 @@ public class CGFloatRangeAsserter {
      * - Fixme: ⚠️️ ⚠️️ replace this class/function with a generic solution
      */
     public static func within(_ range: (start: CGFloat, end: CGFloat), _ number: CGFloat) -> Bool {
-        return number <= CGFloatRangeParser.max(range) && number >= CGFloatRangeParser.min(range)
+      number <= CGFloatRangeParser.max(range) && number >= CGFloatRangeParser.min(range)
     }
     /**
      * - Note: this method is supplimentary to the within method, concerning the "max" problem
@@ -15,6 +15,6 @@ public class CGFloatRangeAsserter {
      * - Fixme: ⚠️️ replace this class/function with a generic solution
      */
     public static func contained(_ range: (start: CGFloat, end: CGFloat), _ number: CGFloat) -> Bool {
-        return number < CGFloatRangeParser.max(range) && number >= CGFloatRangeParser.min(range)
+      number < CGFloatRangeParser.max(range) && number >= CGFloatRangeParser.min(range)
     }
 }
