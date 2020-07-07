@@ -14,6 +14,9 @@ public class IntParser {
     * Returns a normalized integer value (loopy index)
     * - Note: Great for iterating int arrays
     * - Note: Can be used for looping items in an array (carousel etc)
+    * - Note: TwoLiner is also possible: 
+    * let idx: Int = i + offset
+    * let normalizedIdx: Int = idx < count ? idx : idx % count
     * ## Examples:
     * print(IntParser.normalize(3, 7))//3
     * print(IntParser.normalize(-3, 7))//4
