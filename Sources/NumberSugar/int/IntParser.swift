@@ -8,7 +8,7 @@ public class IntParser {
     * - Important: ⚠️️ You now have the native: `let randomInt = Int.random(in: 1..<5)`
     */
    public static func random(_ min: Int, _ max: Int) -> Int {//returns an integer between 0 - x
-      return Int.random(in: min..<max)//--Int(arc4random_uniform(UInt32(max)) + UInt32(min))
+      Int.random(in: min..<max)//--Int(arc4random_uniform(UInt32(max)) + UInt32(min))
    }
    /**
     * Returns a normalized integer value (loopy index)

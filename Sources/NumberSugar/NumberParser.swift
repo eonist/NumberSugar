@@ -15,7 +15,7 @@ public class NumberParser {
    /**
     * Returns the count of decimals in a number
     * ## Examples:
-    * NumberParser.decimals(4.433)//Output: 3
+    * NumberParser.decimals(4.433) // Output: 3
     */
    public static func decimals<T: Comparable>(_ number: T) -> Int {//could also be named decimalPLaces
       let matches: [String] = String(describing: number).split(separator: ".").map { String($0) }
